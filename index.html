@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Science of Space</title>
+  <style>
+    :root {
+      --primary: #5e60ce;
+      --accent: #f4a261;
+      --background: #f9f9f9;
+      --text: #333;
+      --card: #fff;
+    }
+
+    body {
+  background: linear-gradient(135deg, #0b0c2a 0%, #1a237e 100%);
+  color: #000000;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .post {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2rem;
+      transition: transform 0.2s;
+    }
+
+    .post:hover {
+      transform: scale(1.01);
+    }
+
+    .post h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .post .more {
+      display: none;
+    }
+
+    .read-more-btn {
+      margin-top: 1rem;
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .read-more-btn:hover {
+      background: #e07b39;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="margin: 0; font-size: 1.5rem;">The Science of Space</h1>
+    <nav>
+      <a href="#">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Example Blog Post -->
+    <div class="post">
+      <h2>The Mystery of Dark Matter</h2>
+      <p>
+        Scientists have long been puzzled by the fact that the universe appears to contain far more matter than we can see. This invisible material, known as dark matter, doesn’t emit or reflect light but exerts a powerful gravitational pull on galaxies...
+      </p>
+      <div class="more">
+        <p>
+          The search for dark matter has led researchers deep underground and into space in hopes of detecting rare interactions with ordinary matter. Although we haven’t directly observed it, dark matter makes up around 27% of the universe. Understanding it could completely reshape physics and our understanding of the cosmos.
+        </p>
+      </div>
+      <button class="read-more-btn" onclick="toggleMore(this)">Read More</button>
+    </div>
+
+    <!-- Add more blog posts like this -->
+  </div>
+
+  <script>
+    function toggleMore(button) {
+      const more = button.previousElementSibling;
+      const isVisible = more.style.display === "block";
+      more.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Read More" : "Show Less";
+    }
+  </script>
+</body>
+</html>
